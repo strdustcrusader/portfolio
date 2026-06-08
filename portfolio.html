@@ -69,7 +69,54 @@
         
             <section id="contact">
                 <h2> Contact </h2>
-                    <p> Reach me at joeyhuang.o15@gmail.com</p>
+
+                <p> Want to get in touch? Fill out the form below. </p>
+
+                <form action="#" method="POST"> 
+                
+                <p> 
+                    <label for="name">Your Name:</label><br>
+                    <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                </p>    
+
+                <!--SELECT: dropdown. Each <option> is a choice-->
+                <p>
+                    <label for="subject">Subject:</label><br>
+                    <select id="subject" name="subject">
+                        <option value="request">Detective Boys Request </option>
+                        <option value="question">Question</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+
+                <!--Text Area: Multi-line test.-->
+                <p>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" rows="6" cols="40"
+                        placeholder="Write your message here..." required> 
+                    </textarea>
+                </p>
+                
+                <!-- CHECKBOX: A single yes/no toggle
+                     The label wraps the input - anohter valid label pattern -->
+
+                <p>
+                    <label>
+                        <input type="checkbox" name="newsletter" value="yes">
+                        Add me to the newsletter
+                    </label>
+                </p>
+
+                <p>
+                    <button type="submit">Send message</button>
+                    <button type="reset"> Clear</button>
+                </p>
+                
+                </form>
+                    
+                <p> You can also reach me directly: </p>
+                    <a href="mailto:joeyhuang.o15@gmail.com"> joeyhuang.o15@gmail.com</a>
+                    <br>
                     <a href="https://github.com/strdustcrusader">Github Profile</a>
 
             </section> 
