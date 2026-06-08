@@ -1,0 +1,123 @@
+<!-- Portfolio Assignment based on Professor Sourya's Snapshots -->
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title> Hiroshi Agasa - Portfolio </title>
+        
+        <!--Link to the external stylesheet.-->
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+
+    <body>
+        <!-- HEADER: Top of page. Usually logo + site nav -->
+        <header class="header"> 
+            <h1> Hiroshi Agasa </h1>
+            <p> Engineer and Inventor <p>
+        
+            <!-- Nav: Site navigation links.-->
+            <nav class="navbar">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        </hr>
+ 
+        <main>
+            <!-- ABOUT SECTION -->            
+            <section id="about">
+                <div class="about">
+                    <h2> About</h2>
+                    <img src="img/agasahiroshi.jpg" width="200" alt="Image of Dr. Agasa">
+                </div>
+                    <p> Based in Beika, Japan. I make gadgets and gizmos - My favorite things to make are convenient accessories!
+                        In my free time, I'm an advisor for the Detective Boys, a Detective club for lovers of Sherlock Holmes. We like to solve mysteries!
+                    </p>
+            </section>
+
+            <section id="projects">
+                <h2> Projects </h2>
+                <ul class="list">
+                    <li>Voice-Changing Bowtie</li>
+                    <li>Power-Enhancing Kick Shoes</li>
+                    <li>Stun-Gun Wristwatch</li>
+                    <li>Detective Boys Badge</li>
+                    <li>Turbo Engine Skateboard</li>
+                    <li>Earring Cellphone</li>
+                </ul>
+            </section>
+
+        </hr>
+
+            <!-- FUN FACTS SECTION -->            
+            <aside>
+            <h2>Fun Facts</h2>
+            <ul class="list">
+                <li>My name is inspired by mystery writer Agatha Christie!</li>
+                <li>My name is also a pun, written with the same kanji for hakase 博士 (meaning professor) </li>
+                <li>I drive a yellow Volkswagen Beetle</li>
+                <li>I love pasta and tomato juice</li>
+            </ul>
+            </aside>
+
+            <!-- CONTACT SECTION -->
+      
+            <section id="contact">
+                <h2> Contact </h2>
+                <p> Want to get in touch? You can reach me directly at: </p>
+                        <a href="mailto:joeyhuang.o15@gmail.com"> joeyhuang.o15@gmail.com</a>
+                        <br>
+                        <a href="https://github.com/strdustcrusader">Github Profile</a>
+                <p> Or fill out this form!</p>
+                <form action="#" method="POST">  
+                    <p> 
+                        <label for="name">Your Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                    </p>    
+
+                    <!--SELECT: dropdown. Each <option> is a choice-->
+                    <p>
+                        <label for="subject">Subject:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="request">Detective Boys Request </option>
+                            <option value="question">Query</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
+
+                    <!--Text Area: Multi-line test.-->
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="6" cols="40"
+                            placeholder="Write your message here..." required> 
+                        </textarea>
+                    </p>
+                    
+                    <!-- CHECKBOX: A single yes/no toggle -->
+                    <p>
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Add me to the newsletter
+                        </label>
+                    </p>
+
+                    <p>
+                        <button type="submit">Send message</button>
+                        <button type="reset"> Clear</button>
+                    </p>
+                    
+                    </form>
+            </section> 
+        </main>
+        
+
+            <!-- FOOTER -->
+            <footer class ="site-footer">
+                <p>&copy; 2026 Joey Huang. Built with plain HTML for CSCI 39548.</p>
+            </footer>
+   </body>
+</html>
