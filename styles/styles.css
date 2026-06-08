@@ -1,7 +1,7 @@
 main {
   max-width: 500px;
-  margin: 0 auto;
-  padding: 0 16px;
+  margin: auto;
+  padding: 16px;
   background-color: hsl(0, 0%, 100%);
 }
 
@@ -11,20 +11,22 @@ h2 {
   border-bottom: 1px solid #ff1111;
 }
 
-.site-header {
+.header {
   text-align: center;
   padding: 0px;
   color: rgb(135, 167, 255);
 }
 
-.site-nav {
+
+/* Navigation Bar for About/Projects/Contact */
+.navbar {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.site-nav a {
+.navbar a {
   padding: 6px;
   background-color: #ffffff;
   border: 2px outset #000000;
@@ -33,12 +35,13 @@ h2 {
   letter-spacing: 2px;
 }
 
-.about-grid {
+.about {
   display: flex;
   gap: 16px;
-  align-items: flex-start;
+  align-items: flex-start; /* Otherwise, about border bottom would look awkward */
 }
 
+/* For Projects+Fun Fact lists */
 .list {
   list-style-type: circle;
   padding-left: 16px;
@@ -48,14 +51,16 @@ h2 {
   margin-bottom: 5px;
 }
 
+/* Footer */
 .site-footer {
   text-align: center;
   font-size: 1rem;
 }
 
+/*For Better Mobile Viewing*/
 @media (max-width: 600px) {
   .site-title {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     letter-spacing: 3px;
   }
 
@@ -64,7 +69,7 @@ h2 {
     align-items: stretch;
   }
 
-  .about-grid {
+  .about {
     flex-direction: column;
     align-items: center;
     text-align: center;
