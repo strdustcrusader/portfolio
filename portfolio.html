@@ -4,129 +4,120 @@
 <html>
     <head>
         <title> Hiroshi Agasa - Portfolio </title>
-    </head>
-    <body>
+        
+        <!--Link to the external stylesheet.-->
+         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+
+    <body>
         <!-- HEADER: Top of page. Usually logo + site nav -->
-        <header> 
+        <header class="site-header"> 
             <h1> Hiroshi Agasa </h1>
             <p> Engineer and Inventor <p>
         
-            <!-- Nav: Site navigation links.
-                href="#about" jumps to the element with id="about".-->
-            <nav>
+            <!-- Nav: Site navigation links.-->
+            <nav class="site-nav" aria-label="Main navigation">
                 <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#education">Education</a>
+                <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </nav>
         </header>
 
-        <!-- Main: The primary content of the page.
-             Exactly ONE <main> per page-->            
+        </hr>
+ 
         <main>
-            <!-- Section: A thematic grouping of content.
-                 Usually has a heading.-->
+            <!-- ABOUT SECTION -->            
             <section id="about">
-                <h2> About Me </h2>
-                <img src="img/agasahiroshi.jpg" width="200" alt="Image of Dr. Agasa">
-                <p>
-                    Based in Beika, Japan. I make gadgets and gizmos - In my free time, I'm an advisor for the Detective Boys!
-                    I love pasta and tomato juice!
-                </p>
+                <div class="about-grid">
+                    <h2> About</h2>
+                    <img src="img/agasahiroshi.jpg" width="200" alt="Image of Dr. Agasa">
+                    <p> Based in Beika, Japan. I make gadgets and gizmos - My favorite things to make are convenient accessories!
+                        In my free time, I'm an advisor for the Detective Boys, a Detective club for lovers of Sherlock Holmes. We like to solve mysteries!
+                    </p>
+                </div>
             </section>
 
-            <section id="skills">
-                <!--Unordered List: Bulleted items, order doesn't matter -->
-                <h2> Skills </h2>
-                    <ul>
-                        <li> Html, CSS, C++, Javascript, Typescript </li>
-                        <li> Circuit design and organization </li>
-                        <li> Tech miniaturization </li>
-                    </ul>
+            <section id="projects">
+                <h2> Projects </h2>
+                <ul class="list">
+                    <li>Voice-Changing Bowtie</li>
+                    <li>Power-Enhancing Kick Shoes</li>
+                    <li>Stun-Gun Wristwatch</li>
+                    <li>Detective Boys Badge</li>
+                    <li>Turbo Engine Skateboard</li>
+                    <li>Earring Cellphone</li>
+                </ul>
             </section>
 
-            <section id="education">    
-                <!-- Table: Tabular data ONLY. Not for layout-->
-                <h2> Education </h2>
-                    <table border="1">
-                        <thead> 
-                            <tr>
-                                <th> Institution </th>
-                                <th> Degree </th>
-                                <th> Years </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td> Tohto University </td>
-                                <td> PHD, Engineering </td>
-                                <td> 1967 - 1973 </td>
-                            </tr>
-                        </tbody>
-                        </table>
-            </section>
-        
+        </hr>
+
+            <!-- FUN FACTS SECTION -->            
+            <aside>
+            <h2>Fun Facts</h2>
+            <ul class="list">
+                <li>My name is inspired by mystery writer Agatha Christie!</li>
+                <li>My name is also a pun, written with the same kanji for hakase 博士 (meaning professor) </li>
+                <li>I drive a yellow Volkswagen Beetle</li>
+                <li>I love pasta and tomato juice</li>
+            </ul>
+            </aside>
+
+            <!-- CONTACT SECTION -->
+      
             <section id="contact">
                 <h2> Contact </h2>
+                <p> Want to get in touch? You can reach me directly at: </p>
+                        <a href="mailto:joeyhuang.o15@gmail.com"> joeyhuang.o15@gmail.com</a>
+                        <br>
+                        <a href="https://github.com/strdustcrusader">Github Profile</a>
+                <p> Or fill out this form!</p>
+                <form action="#" method="POST">  
+                    <p> 
+                        <label for="name">Your Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+                    </p>    
 
-                <p> Want to get in touch? Fill out the form below. </p>
+                    <!--SELECT: dropdown. Each <option> is a choice-->
+                    <p>
+                        <label for="subject">Subject:</label><br>
+                        <select id="subject" name="subject">
+                            <option value="request">Detective Boys Request </option>
+                            <option value="question">Query</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </p>
 
-                <form action="#" method="POST"> 
-                
-                <p> 
-                    <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" placeholder="Jane Doe" required>
-                </p>    
-
-                <!--SELECT: dropdown. Each <option> is a choice-->
-                <p>
-                    <label for="subject">Subject:</label><br>
-                    <select id="subject" name="subject">
-                        <option value="request">Detective Boys Request </option>
-                        <option value="question">Question</option>
-                        <option value="other">Other</option>
-                    </select>
-                </p>
-
-                <!--Text Area: Multi-line test.-->
-                <p>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="6" cols="40"
-                        placeholder="Write your message here..." required> 
-                    </textarea>
-                </p>
-                
-                <!-- CHECKBOX: A single yes/no toggle
-                     The label wraps the input - anohter valid label pattern -->
-
-                <p>
-                    <label>
-                        <input type="checkbox" name="newsletter" value="yes">
-                        Add me to the newsletter
-                    </label>
-                </p>
-
-                <p>
-                    <button type="submit">Send message</button>
-                    <button type="reset"> Clear</button>
-                </p>
-                
-                </form>
+                    <!--Text Area: Multi-line test.-->
+                    <p>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="6" cols="40"
+                            placeholder="Write your message here..." required> 
+                        </textarea>
+                    </p>
                     
-                <p> You can also reach me directly: </p>
-                    <a href="mailto:joeyhuang.o15@gmail.com"> joeyhuang.o15@gmail.com</a>
-                    <br>
-                    <a href="https://github.com/strdustcrusader">Github Profile</a>
+                    <!-- CHECKBOX: A single yes/no toggle -->
+                    <p>
+                        <label>
+                            <input type="checkbox" name="newsletter" value="yes">
+                            Add me to the newsletter
+                        </label>
+                    </p>
 
+                    <p>
+                        <button type="submit">Send message</button>
+                        <button type="reset"> Clear</button>
+                    </p>
+                    
+                    </form>
             </section> 
-
         </main>
         
-        <!-- FOOTER: bottom of page. Copyright, secondary links, contact. -->
-        <footer>
-        <p>&copy; 2026 Joey Huang. Built with plain HTML for CSCI 39548.</p>
-        </footer>
 
+            <!-- FOOTER -->
+            <footer class ="site-footer">
+                <p>&copy; 2026 Joey Huang. Built with plain HTML for CSCI 39548.</p>
+            </footer>
    </body>
 </html>
